@@ -1,0 +1,37 @@
+[project]
+name = "impact-of-data-ranking-on-training-dynamics"
+version = "0.1.0"
+description = "Opis Twojego projektu"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[tool.uv]
+dev-dependencies = [
+    "ruff>=0.3.0",
+    "mypy>=1.9.0",
+]
+
+# --- Konfiguracja Ruff ---
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.lint]
+# E, W - błędy i ostrzeżenia pycodestyle
+# F - Pyflakes (logika)
+# I - isort (porządek w importach)
+# B - flake8-bugbear (częste błędy)
+select = ["E", "F", "I", "W", "B"]
+ignore = []
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+# --- Konfiguracja Mypy ---
+[tool.mypy]
+python_version = "3.11"
+strict = true
+warn_return_any = true
+ignore_missing_imports = true
